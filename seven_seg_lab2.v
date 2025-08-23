@@ -34,11 +34,11 @@ module seven_seg(
 
     reg [3:0] mux_out; //mux to tell what number to communicate to disp
     reg [3:0] sel = 4'b0111; //initialize internal selector bus
-    reg [8:0] count_reg; //count storage for timer
+    reg [15:0] count_reg; //count storage for timer
 
 
     parameter
-    C_MAX_COUNT = 500 - 1, //max count for 500Hz clock
+    C_MAX_COUNT = 50_000 - 1, //max count for 500Hz clock
     ZERO = 7'b0111111,
     ONE = 7'b0000110,
     TWO = 7'b1011011,
